@@ -1,3 +1,3 @@
 # Kana Quiz
 
-[Kana Quiz](https://kuuuube.github.io/kana-quiz)
+Simple kana quiz. Go to https://kuuuube.github.io/kana-quiz.
