@@ -156,8 +156,14 @@ ul#tools li a {
 	height: max-content;
 }
 
+#right-row {
+	display: flex;
+	justify-content: center;
+}
+
 #count {
 	float:right;
+	padding-right: 1em;
 }
 
 #show_options {
