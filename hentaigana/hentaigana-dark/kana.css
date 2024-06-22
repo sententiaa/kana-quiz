@@ -31,6 +31,10 @@ td {
 	background-color: rgb(78, 78, 78);
 }
 
+.hiragana-row {
+	border-bottom: 1px solid #dae2ef;
+}
+
 .kana {
 	font-size:140%;
 	white-space:nowrap;
