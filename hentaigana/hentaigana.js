@@ -23,19 +23,6 @@ var kana = {
 		{ 'ん': 'n' },
 }
 
-var replacements = {
-	'o': ['wo'],
-	'chi': ['ci'],
-	'shi': ['si'],
-	'tsu': ['tu'],
-	'zu': ['du'],
-	'ji': ['di', 'zi'],
-	'fu': ['hu'],
-	'ja': ['dya'],
-	'jo': ['dyo'],
-	'ju': ['dyu']
-};
-
 var active = [];
 var shuffled = [];
 
@@ -169,9 +156,6 @@ function check_answer() {
 	chars = answer.split('');
 
 	possible = [cur_reading];
-	if (cur_reading in replacements) {
-		possible = possible.concat(replacements[cur_reading]);
-	}
 
 	for (i = 0; i < chars.length; i++) {
 		var err = true;
