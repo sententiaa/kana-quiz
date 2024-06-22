@@ -134,7 +134,7 @@ function show_kana() {
 	document.getElementById('input_box').value = '';
 
 	if (active.length == 0) {
-		document.getElementById('hsingle').checked = true;
+		document.getElementById('hentaigana-a').checked = true;
 		save_settings();
 	}
 
