@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<!-- 
+Kana audio from Tae Kim: http://www.guidetojapanese.org/learn/grammar/hiragana
+Stroke order animations from Wikimedia Commons: https://commons.wikimedia.org/wiki/Category:Animations_of_katakana
+Word audio from JapanesePod101: http://assets.languagepod101.com/dictionary/japanese/audiomp3.php?kana=にっぽん&kanji=日本
+-->
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Hentaigana</title>
+	<link rel="stylesheet" href="kana.css">
+</head>
+
+<body>
+	<script src="../hentaigana.js"></script>
+
+	<h1>Hentaigana</h1>
+
+	<div id="kanabox">
+		<div id="answer">&nbsp;</div>
+		<div id="kana_con"><span id="kana"></span></div>
+		<div id="input"><input type="text" id="input_box" autofocus></div>
+		<div id="message">Hover over the kana to show its romanization and type the answer.</div>
+		<div class="row">
+			<ul id="tools"><li></li></ul>
+			<div id="right-row">
+				<div id="count"></div>
+				<a id="theme" href="../hentaigana-light/index.html">Light mode</a>
+			</div>
+		</div>
+	</div>
+
+	<div id="options">
+		<h2>
+			<label class="collapse" for="show_options">Options <span class="checkall"><a>show/hide</a></span></label>
+		</h2>
+		<input id="show_options" type="checkbox">
+		<div id="options_inner">
+			<h3>Hentaigana <span class="checkall"><a onclick="check('hcheck')">check all</a> | <a
+						onclick="uncheck('hcheck')">uncheck all</a></span></h3>
+			<table>
+				<tbody>
+					<tr class="checkrow hcheck">
+						<td><input type="checkbox" class="kanacheck" id="hsingle" checked></td>
+						<td><input type="checkbox" class="kanacheck" id="hk"></td>
+						<td><input type="checkbox" class="kanacheck" id="hs"></td>
+						<td><input type="checkbox" class="kanacheck" id="ht"></td>
+						<td><input type="checkbox" class="kanacheck" id="hn"></td>
+						<td><input type="checkbox" class="kanacheck" id="hh"></td>
+						<td><input type="checkbox" class="kanacheck" id="hm"></td>
+						<td><input type="checkbox" class="kanacheck" id="hy"></td>
+						<td><input type="checkbox" class="kanacheck" id="hr"></td>
+						<td><input type="checkbox" class="kanacheck" id="hw"></td>
+						<td><input type="checkbox" class="kanacheck" id="hn1"></td>
+						<td><input type="checkbox" class="kanacheck" id="hg"></td>
+						<td><input type="checkbox" class="kanacheck" id="hz"></td>
+						<td><input type="checkbox" class="kanacheck" id="hd"></td>
+						<td><input type="checkbox" class="kanacheck" id="hb"></td>
+						<td><input type="checkbox" class="kanacheck" id="hp"></td>
+					</tr>
+					<tr>
+						<td><span class="kana">あ</span> <span class="romaji">a</span></td>
+						<td><span class="kana">か</span> <span class="romaji">ka</span></td>
+						<td><span class="kana">さ</span> <span class="romaji">sa</span></td>
+						<td><span class="kana">た</span> <span class="romaji">ta</span></td>
+						<td><span class="kana">な</span> <span class="romaji">na</span></td>
+						<td><span class="kana">は</span> <span class="romaji">ha</span></td>
+						<td><span class="kana">ま</span> <span class="romaji">ma</span></td>
+						<td><span class="kana">や</span> <span class="romaji">ya</span></td>
+						<td><span class="kana">ら</span> <span class="romaji">ra</span></td>
+						<td><span class="kana">わ</span> <span class="romaji">wa</span></td>
+						<td></td>
+						<td><span class="kana">が</span> <span class="romaji">ga</span></td>
+						<td><span class="kana">ざ</span> <span class="romaji">za</span></td>
+						<td><span class="kana">だ</span> <span class="romaji">da</span></td>
+						<td><span class="kana">ば</span> <span class="romaji">ba</span></td>
+						<td><span class="kana">ぱ</span> <span class="romaji">pa</span></td>
+					</tr>
+					<tr>
+						<td><span class="kana">い</span> <span class="romaji">i</span></td>
+						<td><span class="kana">き</span> <span class="romaji">ki</span></td>
+						<td><span class="kana">し</span> <span class="romaji">shi</span></td>
+						<td><span class="kana">ち</span> <span class="romaji">chi</span></td>
+						<td><span class="kana">に</span> <span class="romaji">ni</span></td>
+						<td><span class="kana">ひ</span> <span class="romaji">hi</span></td>
+						<td><span class="kana">み</span> <span class="romaji">mi</span></td>
+						<td></td>
+						<td><span class="kana">り</span> <span class="romaji">ri</span></td>
+						<td></td>
+						<td></td>
+						<td><span class="kana">ぎ</span> <span class="romaji">gi</span></td>
+						<td><span class="kana">じ</span> <span class="romaji">ji</span></td>
+						<td><span class="kana">ぢ</span> <span class="romaji">ji</span></td>
+						<td><span class="kana">び</span> <span class="romaji">bi</span></td>
+						<td><span class="kana">ぴ</span> <span class="romaji">pi</span></td>
+					</tr>
+					<tr>
+						<td><span class="kana">う</span> <span class="romaji">u</span></td>
+						<td><span class="kana">く</span> <span class="romaji">ku</span></td>
+						<td><span class="kana">す</span> <span class="romaji">su</span></td>
+						<td><span class="kana">つ</span> <span class="romaji">tsu</span></td>
+						<td><span class="kana">ぬ</span> <span class="romaji">nu</span></td>
+						<td><span class="kana">ふ</span> <span class="romaji">fu</span></td>
+						<td><span class="kana">む</span> <span class="romaji">mu</span></td>
+						<td><span class="kana">ゆ</span> <span class="romaji">yu</span></td>
+						<td><span class="kana">る</span> <span class="romaji">ru</span></td>
+						<td></td>
+						<td></td>
+						<td><span class="kana">ぐ</span> <span class="romaji">gu</span></td>
+						<td><span class="kana">ず</span> <span class="romaji">zu</span></td>
+						<td><span class="kana">づ</span> <span class="romaji">zu</span></td>
+						<td><span class="kana">ぶ</span> <span class="romaji">bu</span></td>
+						<td><span class="kana">ぷ</span> <span class="romaji">pu</span></td>
+					</tr>
+					<tr>
+						<td><span class="kana">え</span> <span class="romaji">e</span></td>
+						<td><span class="kana">け</span> <span class="romaji">ke</span></td>
+						<td><span class="kana">せ</span> <span class="romaji">se</span></td>
+						<td><span class="kana">て</span> <span class="romaji">te</span></td>
+						<td><span class="kana">ね</span> <span class="romaji">ne</span></td>
+						<td><span class="kana">へ</span> <span class="romaji">he</span></td>
+						<td><span class="kana">め</span> <span class="romaji">me</span></td>
+						<td></td>
+						<td><span class="kana">れ</span> <span class="romaji">re</span></td>
+						<td></td>
+						<td></td>
+						<td><span class="kana">げ</span> <span class="romaji">ge</span></td>
+						<td><span class="kana">ぜ</span> <span class="romaji">ze</span></td>
+						<td><span class="kana">で</span> <span class="romaji">de</span></td>
+						<td><span class="kana">べ</span> <span class="romaji">be</span></td>
+						<td><span class="kana">ぺ</span> <span class="romaji">pe</span></td>
+					</tr>
+					<tr>
+						<td><span class="kana">お</span> <span class="romaji">o</span></td>
+						<td><span class="kana">こ</span> <span class="romaji">ko</span></td>
+						<td><span class="kana">そ</span> <span class="romaji">so</span></td>
+						<td><span class="kana">と</span> <span class="romaji">to</span></td>
+						<td><span class="kana">の</span> <span class="romaji">no</span></td>
+						<td><span class="kana">ほ</span> <span class="romaji">ho</span></td>
+						<td><span class="kana">も</span> <span class="romaji">mo</span></td>
+						<td><span class="kana">よ</span> <span class="romaji">yo</span></td>
+						<td><span class="kana">ろ</span> <span class="romaji">ro</span></td>
+						<td><span class="kana">を</span> <span class="romaji">o</span></td>
+						<td><span class="kana">ん</span> <span class="romaji">n</span></td>
+						<td><span class="kana">ご</span> <span class="romaji">go</span></td>
+						<td><span class="kana">ぞ</span> <span class="romaji">zo</span></td>
+						<td><span class="kana">ど</span> <span class="romaji">do</span></td>
+						<td><span class="kana">ぼ</span> <span class="romaji">bo</span></td>
+						<td><span class="kana">ぽ</span> <span class="romaji">po</span></td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h3>Explanation</h3>
+			<div id="explanation">
+				<p></p>
+			</div>
+
+		</div>
+	</div>
+</body>
+
+</html>

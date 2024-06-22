@@ -1,0 +1,41 @@
+:root {
+	--padding-size: 2em;
+	width: calc(100% - var(--padding-size));
+	height: calc(100% - var(--padding-size));
+}
+
+body {
+	font-family:Verdana;
+	background-color:rgb(34, 34, 34);
+	color: #fff;
+	width: 100%;
+	height: 100%;
+}
+
+a {
+	color:#90dcf8;
+	font-weight:bold;
+	cursor:pointer;
+	text-decoration:none;
+}
+
+h1 {
+	text-align: center;
+	color: #dbb7b9;
+}
+
+#kanabox {
+	margin:auto;
+	width:42em;
+	padding: var(--padding-size);
+	background-color:rgb(50, 50, 50);
+	border-radius:3px;
+}
+
+.flex-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
