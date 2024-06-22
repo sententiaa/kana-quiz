@@ -2,6 +2,7 @@
 	--padding-size: 2em;
 	width: calc(100% - var(--padding-size));
 	height: calc(100% - var(--padding-size));
+	margin: auto;
 }
 
 body {
