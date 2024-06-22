@@ -248,8 +248,14 @@ onload = function () {
 	answer_input.onpropertychange = answer_input.oninput;
 
 	document.body.onkeydown = function (e) {
-		document.getElementById('input_box').focus();
-		if (e.keyCode == 32 || e.keyCode == 13) {
+		console.log(e)
+		let focus_keys = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+		let submit_keys = [" ", "Enter"];
+		if (focus_keys.includes(e.key) || submit_keys.includes(e.key)) {
+			document.getElementById('input_box').focus();
+		}
+
+		if (submit_keys.includes(e.key)) {
 			e.preventDefault();
 			if (!wrong) {
 				check_answer();
