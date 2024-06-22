@@ -266,7 +266,7 @@ onload = function () {
 		console.log(e)
 		let focus_keys = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 		let submit_keys = [" ", "Enter"];
-		if (focus_keys.includes(e.key) || submit_keys.includes(e.key)) {
+		if ((focus_keys.includes(e.key) || submit_keys.includes(e.key)) && !(e.ctrlKey || e.altKey || e.metaKey)) {
 			document.getElementById('input_box').focus();
 		}
 
