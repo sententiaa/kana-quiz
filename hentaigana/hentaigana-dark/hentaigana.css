@@ -26,7 +26,8 @@ td {
 	text-align:center;
 	vertical-align:top;
 	padding:.3em .4em;
-	width: 1em;
+	width: 1.447em;
+	max-width: 1.447em;
 }
 
 .checkrow {
