@@ -37,17 +37,10 @@ td {
 
 .kana {
 	font-size:140%;
-	white-space:nowrap;
 }
 
 #rikaichan-window {
 	display:none!important;
-}
-
-.romaji {
-	white-space:nowrap;
-	display:block;
-	font-size:85%;
 }
 
 #kanabox {
