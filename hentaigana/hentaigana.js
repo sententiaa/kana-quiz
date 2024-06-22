@@ -1,26 +1,24 @@
 var kana = {
-	'hentaigana-a':
-		{ '𛀂': 'a', '𛀅': 'a', '𛀃': 'a', '𛀄': 'a' },
-	'hk':
-		{ 'か': 'ka', 'き': 'ki', 'く': 'ku', 'け': 'ke', 'こ': 'ko' },
-	'hs':
-		{ 'さ': 'sa', 'し': 'shi', 'す': 'su', 'せ': 'se', 'そ': 'so' },
-	'ht':
-		{ 'た': 'ta', 'ち': 'chi', 'つ': 'tsu', 'て': 'te', 'と': 'to' },
-	'hn':
-		{ 'な': 'na', 'に': 'ni', 'ぬ': 'nu', 'ね': 'ne', 'の': 'no' },
-	'hh':
-		{ 'は': 'ha', 'ひ': 'hi', 'ふ': 'fu', 'へ': 'he', 'ほ': 'ho' },
-	'hm':
-		{ 'ま': 'ma', 'み': 'mi', 'む': 'mu', 'め': 'me', 'も': 'mo' },
-	'hy':
-		{ 'や': 'ya', 'ゆ': 'yu', 'よ': 'yo' },
-	'hr':
-		{ 'ら': 'ra', 'り': 'ri', 'る': 'ru', 'れ': 're', 'ろ': 'ro' },
-	'hw':
-		{ 'わ': 'wa', 'を': 'o' },
-	'hn1':
-		{ 'ん': 'n' },
+	'hentaigana-a': {'𛀂𛀅𛀃𛀄':'a'},
+	'hentaigana-i': {'𛀆𛀇𛀈𛀉':'i'},
+	'hentaigana-u': {'𛀊𛀋𛀌𛀍𛀎':'u'},
+	'hentaigana-e': {'𛀁𛀏𛀐𛀑𛀒𛀓':'e'},
+	'hentaigana-o': {'𛀔𛀕𛀖':'o'},
+	'hentaigana-ka': {'𛀗𛀘𛀙𛀚𛀛𛀢𛀜𛀝𛀞𛀟𛀠𛀡':'ka'},
+	'hentaigana-ki': {'𛀣𛀤𛀥𛀦𛀻𛀧𛀨𛀩𛀪':'ki'},
+	'hentaigana-ku': {'𛀫𛀬𛀭𛀮𛀯𛀰𛀱':'ku'},
+	'hentaigana-ke': {'𛀳𛀲𛀢𛀴𛀵𛀶𛀷':'ke'},
+	'hentaigana-ko': {'𛀸𛂘𛀹𛀻𛀺':'ko'},
+	'hentaigana-sa': {'':'sa'},
+	'hentaigana-si': {'':'si'},
+	'hentaigana-su': {'':'su'},
+	'hentaigana-se': {'':'se'},
+	'hentaigana-so': {'':'so'},
+	'hentaigana-ta': {'':'ta'},
+	'hentaigana-ti': {'':'ti'},
+	'hentaigana-tu': {'':'tu'},
+	'hentaigana-te': {'':'te'},
+	'hentaigana-to': {'':'to'},
 }
 
 var active = [];
@@ -121,8 +119,11 @@ function collect() {
 	for (i = 0; i < kanacheck.length; i++) {
 		cur = kanacheck[i];
 		if (cur.checked == true) {
-			for (p in kana[cur.id]) {
-				active.push([p, kana[cur.id][p]]);
+			for (let key in kana[cur.id]) {
+				let key_array = Array.from(key);
+				for (let j = 0; j < key_array.length; j++) {
+					active.push([key_array[j], kana[cur.id][key]]);
+				}
 			}
 		}
 	}
