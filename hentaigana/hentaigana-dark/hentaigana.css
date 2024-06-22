@@ -24,6 +24,7 @@ td {
 	border-left:1px solid #dae2ef;
 	border-right:1px solid #dae2ef;
 	text-align:center;
+	vertical-align:top;
 	padding:.3em .4em;
 }
 
