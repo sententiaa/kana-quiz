@@ -1,3 +1,12 @@
+@font-face {
+	font-family: "BabelStone Han Hentaigana";
+	src: url(../fonts/BabelstoneHanHentaigana.woff2);
+}
+
+.hentaigana-font {
+	font-family: "BabelStone Han Hentaigana", "BabelStone Han","UniHentaiKana","IPAmj明朝","花園明朝A",HanaMinA,HanaMinB,"和田研中丸ゴシック2004絵文字","WadaLabChuMaruGo2004Emoji","和田研細丸ゴシック2004絵文字","WadaLabMaruGo2004Emoji",mincho,serif;
+}
+
 body {
 	font-family:Verdana;
 	background-color:#eef5ed;
@@ -23,26 +32,25 @@ td {
 	border-left:1px solid #dae2ef;
 	border-right:1px solid #dae2ef;
 	text-align:center;
+	vertical-align:top;
 	padding:.3em .4em;
+	width: 1em;
 }
 
 .checkrow {
 	background-color: #f7f7f7;
 }
 
+.hiragana-row {
+	border-bottom: 1px solid #dae2ef;
+}
+
 .kana {
 	font-size:140%;
-	white-space:nowrap;
 }
 
 #rikaichan-window {
 	display:none!important;
-}
-
-.romaji {
-	white-space:nowrap;
-	display:block;
-	font-size:85%;
 }
 
 #kanabox {
@@ -55,7 +63,7 @@ td {
 
 #options {
 	margin:1.5em auto;
-	width:46em;
+	width:49em;
 	padding:0;
 	background-color:#fff;
 	border-radius:3px;
