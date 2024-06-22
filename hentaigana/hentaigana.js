@@ -263,7 +263,6 @@ onload = function () {
 	answer_input.onpropertychange = answer_input.oninput;
 
 	document.body.onkeydown = function (e) {
-		console.log(e)
 		let focus_keys = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 		let submit_keys = [" ", "Enter"];
 		if ((focus_keys.includes(e.key) || submit_keys.includes(e.key)) && !(e.ctrlKey || e.altKey || e.metaKey)) {
