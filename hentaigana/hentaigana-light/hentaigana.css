@@ -97,7 +97,7 @@ h2 .checkall {
 
 #kana_con {
 	text-align:center;
-	font-size:300%;
+	font-size: 5em;
 }
 
 #stroke {
@@ -176,6 +176,7 @@ ul#tools li a {
 #message {
 	text-align:center;
 	font-size: x-large;
+	font-weight: bold;
 	margin-top: 0.25em;
 }
 
