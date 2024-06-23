@@ -528,6 +528,7 @@ function show_kana() {
 
 	if (total_answered > 0) {
 		document.getElementById('count').innerHTML = total_correct + '/' + total_answered;
+		document.getElementById('message').innerHTML = '&nbsp;';
 	}
 
 	if (shuffled.length == 0) {
