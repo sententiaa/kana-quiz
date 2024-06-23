@@ -82,6 +82,11 @@ h3 {
 	margin-top:1.6em;
 }
 
+.misc-options {
+	font-weight: bold;
+	color:#90dcf8;
+}
+
 .checkall a {
 	color:#90dcf8;
 	cursor:pointer;
