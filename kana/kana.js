@@ -132,6 +132,10 @@ var replacements = {
 	'ju': ['dyu']
 };
 
+var counter = {}
+
+/*for (i = 1; i )
+*/
 var active = [];
 var shuffled = [];
 var fonts = [];
@@ -197,9 +201,9 @@ function uncheck(set) {
 function shuffle(orig_array) {
 	var array = orig_array.slice(0);
 	var currentIndex = array.length, temporaryValue, randomIndex;
-
+	print(currentIndex)
 	while (0 !== currentIndex) {
-
+		print("picked random index")
 		randomIndex = Math.floor(Math.random() * currentIndex);
 		currentIndex -= 1;
 
